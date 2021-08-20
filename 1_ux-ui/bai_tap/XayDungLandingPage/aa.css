@@ -1,0 +1,57 @@
+.tt-1{
+    top: 18%;
+    left: 8%;
+}
+.tt-2{
+    top : 10%;
+}
+.a2{
+    padding-left: 43%;
+}
+.p-2{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#a1:hover{
+    border-style: dotted ;
+}
+.tt-3{
+    margin-top: 7%;
+}
+.video-1 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.tt-4{
+    top: 60%;
+}
+.a-link:hover{
+    text-decoration: none;
+}
+.row-icon{
+    margin-left: 10%;
+
+}
+.row-footer-1{
+    height: 7rem;
+}
+.p-footer-1 {
+    padding-top: 3rem;
+    padding-left: 4%;
+}
+.li-page{
+    padding-left: 45rem;
+    padding-top: 0.7rem;
+}
+.li-page-1{
+    padding-top: 0.7rem;
+    padding-left: 3rem;
+}
+.row-icon-1{
+    margin-left: 3% ;
+}
+#footer{
+    background: #cccccc;
+    clear: both;
+    margin: 0;
+}
