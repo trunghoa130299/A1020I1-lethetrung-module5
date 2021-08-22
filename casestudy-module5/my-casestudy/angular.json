@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-project-demo": {
+    "my-casestudy": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-project-demo",
+            "outputPath": "dist/my-casestudy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-project-demo:build"
+            "browserTarget": "my-casestudy:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-project-demo:build:production"
+              "browserTarget": "my-casestudy:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-project-demo:build"
+            "browserTarget": "my-casestudy:build"
           }
         },
         "test": {
@@ -110,19 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-project-demo:serve"
+            "devServerTarget": "my-casestudy:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-project-demo:serve:production"
+              "devServerTarget": "my-casestudy:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "my-project-demo",
-  "cli": {
-    "analytics": "b5f38ee2-bd9e-4682-9e25-2fb1732564c0"
-  }
+    }},
+  "defaultProject": "my-casestudy"
 }
