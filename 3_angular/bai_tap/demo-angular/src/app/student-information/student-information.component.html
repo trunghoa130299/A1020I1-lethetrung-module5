@@ -1,0 +1,13 @@
+<h1>Student Information</h1>
+<div class="card" style="width: 400px">
+  <div class="card-img-top">
+    <img src="{{studentInformation.avatar}}">
+  </div>
+ <label>ID:{{studentInformation.id}}</label>
+<label>Tên: {{studentInformation.name}}</label>
+ <label>Tuổi:{{studentInformation.age}}</label>
+ <label>Địa Chỉ:{{studentInformation.address}}</label>
+ <label>Điểm:{{studentInformation.mark}}</label>
+
+</div>
+<label>Thay đổi điểm:</label><input type="number" (change)="changeMark($any($event).target.value)"/>
