@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentInformationComponent } from './student-information/student-information.component';
-import { StudentListComponent } from './student-list/student-list.component';
+import {FormsModule} from '@angular/forms';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentInformationComponent,
-    StudentListComponent
+    LikesComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
