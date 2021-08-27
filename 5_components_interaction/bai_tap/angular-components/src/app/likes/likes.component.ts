@@ -11,9 +11,8 @@ export class LikesComponent implements OnInit {
 
   @Output()
   changeLike = new EventEmitter<number>();
-  likeThis() {
-    this.likereceive = this.likereceive++;
-    this.changeLike.emit(this.likereceive);
+  likeThis(): any {
+    this.changeLike.emit(this.likereceive++);
   }
   constructor() { }
 

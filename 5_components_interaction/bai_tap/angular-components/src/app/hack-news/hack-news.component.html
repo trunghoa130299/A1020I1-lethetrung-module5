@@ -16,5 +16,5 @@
   </div>
 </div>
 <hr>
-<app-likes [likereceive]="likes"></app-likes>
+<app-likes [likereceive]="likes" (changeLike)="receiveFromLikes($event)"></app-likes>
 
