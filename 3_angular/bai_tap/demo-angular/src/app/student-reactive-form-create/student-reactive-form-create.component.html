@@ -1,0 +1,29 @@
+<h1>Create Student</h1>
+<form [formGroup]="createStudent" (ngSubmit)="createStudentForm()">
+  <div class="form-group">
+    <label class="col-form-label">ID</label><input class="form-control" formControlName="id"/>
+  </div>
+  <div class="alert alert-danger" *ngIf="createStudent.get('id')?.invalid && createStudent.get('id')?.touched">
+    <div *ngIf="createStudent.get('id')?.errors?.required">ID Không được để trống</div>
+    <div *ngIf="createStudent.get('id')?.errors?.min">ID Không được nhỏ hơn 5</div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Name</label><input class="form-control" formControlName="name"/>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Age</label><input class="form-control" formControlName="age"/>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Address</label><input class="form-control" formControlName="address"/>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Mark</label><input class="form-control" formControlName="mark"/>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Avatar</label><input class="form-control" formControlName="avatar"/>
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Create" class="btn btn-primary">
+  </div>
+</form>
+

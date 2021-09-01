@@ -8,6 +8,7 @@ import { RatingBarComponent } from './rating-bar/rating-bar.component';
 import { HackNewsComponent } from './hack-news/hack-news.component';
 import {FormsModule} from '@angular/forms';
 import { LikesComponent } from './likes/likes.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LikesComponent } from './likes/likes.component';
     CountdownTimerComponent,
     RatingBarComponent,
     HackNewsComponent,
-    LikesComponent
+    LikesComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,

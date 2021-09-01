@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-casestudy"
+    }
+  },
+  "defaultProject": "my-casestudy",
+  "cli": {
+    "analytics": "1d181249-c7a3-4f93-994b-b2abd8bb64a8"
+  }
 }
