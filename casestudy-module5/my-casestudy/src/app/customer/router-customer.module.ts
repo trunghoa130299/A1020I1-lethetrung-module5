@@ -21,7 +21,7 @@ const routesCustomer: Routes = [
   declarations: [CreateCustomerComponent, DeleteCustomerComponent],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routesCustomer)
+    RouterModule.forChild(routesCustomer)
   ]
 })
 export class RouterCustomerModule { }

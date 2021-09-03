@@ -21,7 +21,7 @@ const routesEmployee: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routesEmployee)
+    RouterModule.forChild(routesEmployee)
   ]
 })
 export class RouterEmployeeModule { }

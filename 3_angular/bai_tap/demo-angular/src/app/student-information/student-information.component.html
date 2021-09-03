@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Student Information</h1>
 <div class="card" style="width: 400px">
   <div class="card-img-top">
@@ -10,4 +11,6 @@
  <label>Điểm:{{studentInformation.mark}}</label>
 
 </div>
-<label>Thay đổi điểm:</label><input type="number" (change)="changeMark($any($event).target.value)"/>
+  <label>Thay đổi điểm:</label><input type="number" (change)="changeMark($any($event).target.value)"/><br>
+  <a routerLink="" class="btn btn-primary">Back</a>
+</div>
