@@ -7,5 +7,5 @@ export interface Customer {
   phone: string;
   address: string;
   dateOfBirth: string;
-  idTypeCustomer?: any;
+  idTypeCustomer: string;
 }

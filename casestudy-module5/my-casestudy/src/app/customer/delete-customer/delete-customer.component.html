@@ -1,1 +1,15 @@
-<p>delete-customer works!</p>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <table class="table text-center">
+      <thead>
+      <th>Delete customer name: {{customerInfor.id}}</th>
+      </thead>
+      <tr>
+        <td><a class="btn btn-primary" (click)="deleteCustomer(customerInfor.id)">Delete</a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-2"></div>
+
+</div>

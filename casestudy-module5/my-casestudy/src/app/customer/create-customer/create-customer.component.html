@@ -1,1 +1,101 @@
-<p>create-customer works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="text-center">Thêm Khách Hàng</h3>
+    </div>
+    <div class="col-12">
+      <form class="form-group" [formGroup]="createCustomerForm" (ngSubmit)="onSubmitCustomer()">
+        <div class="form-group row">
+          <label for="idCs" class="col-2">ID <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="idCs" formControlName="id">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('id')?.invalid && createCustomerForm.get('id')?.touched &&
+             createCustomerForm.get('id')?.errors?.required">ID Không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('id')?.invalid && createCustomerForm.get('id')?.dirty &&
+             createCustomerForm.get('id')?.errors?.pattern">ID không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-2">Họ Tên <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="name" formControlName="name">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('name')?.invalid && createCustomerForm.get('name')?.touched &&
+             createCustomerForm.get('name')?.errors?.required">Họ Tên Không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('name')?.invalid && createCustomerForm.get('name')?.dirty &&
+             createCustomerForm.get('name')?.errors?.pattern">ID không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2">Giới Tính <span class="text-danger">*</span></label>
+          <div class="col-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="male" name="gender" value="1" formControlName="gender">
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="female" name="gender" value="2" formControlName="gender">
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="lbgt" name="gender" value="0" formControlName="gender">
+              <label class="form-check-label" for="lbgt">LBGT</label>
+            </div>
+          </div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('gender')?.invalid && createCustomerForm.get('gender')?.touched &&
+             createCustomerForm.get('gender')?.errors?.required">Giới Tính Không được để trống</div>
+        </div>
+        <div class="form-group row">
+          <label for="idCard" class="col-2">CMND <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="idCard" formControlName="idCard">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('idCard')?.invalid && createCustomerForm.get('idCard')?.touched &&
+             createCustomerForm.get('idCard')?.errors?.required">Chứng minh nhân dân không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('idCard')?.invalid && createCustomerForm.get('idCard')?.dirty &&
+             createCustomerForm.get('idCard')?.errors?.pattern">ID không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-2">Email <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="email" formControlName="email">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('email')?.invalid && createCustomerForm.get('email')?.touched &&
+             createCustomerForm.get('email')?.errors?.required">Email Không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('name')?.invalid && createCustomerForm.get('email')?.dirty &&
+             createCustomerForm.get('email')?.errors?.pattern">Email không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="phone" class="col-2">Số Điện Thoại <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="phone" formControlName="phone">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('phone')?.invalid && createCustomerForm.get('phone')?.touched &&
+             createCustomerForm.get('phone')?.errors?.required">Số điện thoại Không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('phone')?.invalid && createCustomerForm.get('phone')?.dirty &&
+             createCustomerForm.get('phone')?.errors?.pattern">Số Điện thoại không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="address" class="col-2">Địa Chỉ <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="address" formControlName="address">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('address')?.invalid && createCustomerForm.get('address')?.touched &&
+             createCustomerForm.get('address')?.errors?.required">Địa Chỉ Không được để trống</div>
+        </div>
+        <div class="form-group row">
+          <label for="dayOfBirth" class="col-2">Ngày Sinh <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="dayOfBirth" formControlName="dateOfBirth" type="date">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('dateOfBirth')?.invalid && createCustomerForm.get('dateOfBirth')?.touched &&
+             createCustomerForm.get('dateOfBirth')?.errors?.required">Ngày Sinh Không được để trống</div>
+        </div>
+        <div class="form-group row ">
+          <label for="type" class="col-2">Type <span class="text-danger">*</span></label>
+          <select  id="type" class="form-select col-10 form-control " formControlName="idTypeCustomer">
+            <option selected disabled value="">Choose...</option>
+            <option value="Diamond">Diamond</option>
+            <option value="Platinium">Platinium</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+            <option value="Member">Member</option>
+          </select>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('idTypeCustomer')?.invalid && createCustomerForm.get('idTypeCustomer')?.touched &&
+             createCustomerForm.get('idTypeCustomer')?.errors?.required">Loại Khách hàng Không được để trống</div>
+        </div>
+        <div class="form-group row">
+          <span type="hidden" class="col-3"></span>
+          <span type="hidden" class="col-2"></span>
+          <button type="submit" class="btn btn-primary" [disabled]="!createCustomerForm.valid">Submit</button> &nbsp;
+          <a class="btn btn-secondary" routerLink="/">Đóng</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

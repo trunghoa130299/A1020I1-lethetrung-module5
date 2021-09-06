@@ -7,6 +7,8 @@ import {CustomerComponent} from "./customer.component";
 import {HomeComponent} from "../home/home.component";
 import {EditCustomerComponent} from "./edit-customer/edit-customer.component";
 import {ViewCustomerComponent} from "./view-customer/view-customer.component";
+import {ReactiveFormsModule} from "@angular/forms";
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 const routesCustomer: Routes = [
@@ -21,7 +23,9 @@ const routesCustomer: Routes = [
   declarations: [CreateCustomerComponent, DeleteCustomerComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routesCustomer)
+    RouterModule.forChild(routesCustomer),
+    ReactiveFormsModule,
+    NgxPaginationModule
   ]
 })
 export class RouterCustomerModule { }

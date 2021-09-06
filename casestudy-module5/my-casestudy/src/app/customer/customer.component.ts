@@ -3,6 +3,7 @@ import {Customer} from "./Customer";
 import {customerDao,} from "./CustomerDao";
 import {CustomerService} from "./customer.service";
 
+
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -10,6 +11,8 @@ import {CustomerService} from "./customer.service";
 })
 export class CustomerComponent implements OnInit {
   listCustomer: Customer[] = customerDao;
+  term: any;
+  p: any;
   constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {

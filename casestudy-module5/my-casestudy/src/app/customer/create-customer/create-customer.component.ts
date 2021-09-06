@@ -16,22 +16,22 @@ export class CreateCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.createCustomerForm = new FormGroup({
-      id: new FormControl('', [Validators.required]),
-    name: new FormControl(''),
-    gender: new FormControl(''),
-    idCard: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    address: new FormControl(''),
-    dateOfBirth: new FormControl(''),
-    idTypeCustomer: new FormControl(''),
-  })
-    ;
+      id: new FormControl('', [Validators.required, Validators.pattern("^(KH-)+[0-9]{4}")]),
+    name: new FormControl('', [Validators.required]),
+    gender: new FormControl('', [Validators.required]),
+    idCard: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [Validators.required, Validators.pattern("^(090)+[0-9]{7}")]),
+    address: new FormControl('', [Validators.required]),
+    dateOfBirth: new FormControl('', [Validators.required]),
+    idTypeCustomer: new FormControl('', [Validators.required]),
+  });
   }
 
-  createCustomer() {
-    this.customerService.createCustomer(this.createCustomerForm.value);
-    this.router.navigateByUrl('');
+  onSubmitCustomer() {
+    if (this.createCustomerForm.valid){
+      this.customerService.createCustomer(this.createCustomerForm.value);
+      this.router.navigate(['/listCustomer']);
+    }
   }
-
 }

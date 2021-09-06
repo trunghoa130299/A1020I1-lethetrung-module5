@@ -30,12 +30,6 @@
             <a class="nav-link" href="#">Contract</a>
           </li>
         </ul>
-        <form action="@{/__${selectName}__/search}" class="form-inline my-2 my-lg-0 form-1 pl-5"
-              if="${selectName == 'employee' || selectName== 'customer' || selectName=='home' } " method="get">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                 aria-label="Search" name="nameSearch">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
         <div authorize="isAuthenticated()">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

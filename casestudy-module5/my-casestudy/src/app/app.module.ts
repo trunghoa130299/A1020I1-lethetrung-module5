@@ -15,6 +15,9 @@ import { ViewEmployeeComponent } from './employee/view-employee/view-employee.co
 import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 import {EmployeeModuleModule} from "./employee/employee-module.module";
 import { ViewCustomerComponent } from './customer/view-customer/view-customer.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -34,7 +37,11 @@ import { ViewCustomerComponent } from './customer/view-customer/view-customer.co
     BrowserModule,
     AppRoutingModule,
     CustomerModuleModule,
-    EmployeeModuleModule
+    EmployeeModuleModule,
+    ReactiveFormsModule,
+    FormsModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
