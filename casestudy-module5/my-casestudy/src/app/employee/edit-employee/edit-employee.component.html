@@ -1,1 +1,111 @@
-<p>edit-employee works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="text-center">Sửa Nhân Viên</h3>
+    </div>
+    <div class="col-12">
+      <form class="form-group" [formGroup]="createEmployeeForm" (ngSubmit)="onSubmitEmployee()">
+        <div class="form-group row">
+          <label for="idCs" class="col-2">ID <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="idCs" formControlName="id">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('id')?.invalid && createEmployeeForm.get('id')?.touched &&
+             createEmployeeForm.get('id')?.errors?.required">ID Không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('id')?.invalid && createEmployeeForm.get('id')?.dirty &&
+             createEmployeeForm.get('id')?.errors?.pattern">ID không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-2">Họ Tên <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="name" formControlName="name">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('name')?.invalid && createEmployeeForm.get('name')?.touched &&
+             createEmployeeForm.get('name')?.errors?.required">Họ Tên Không được để trống</div>
+        </div>
+        <div class="form-group row">
+          <label for="idCard" class="col-2">CMND <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="idCard" formControlName="idCard">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('idCard')?.invalid && createEmployeeForm.get('idCard')?.touched &&
+             createEmployeeForm.get('idCard')?.errors?.required">Chứng minh nhân dân không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('idCard')?.invalid && createEmployeeForm.get('idCard')?.dirty &&
+             createEmployeeForm.get('idCard')?.errors?.pattern">Chứng minh nhân dân không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="salary" class="col-2">Lương <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="salary" formControlName="idCard">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('salary')?.invalid && createEmployeeForm.get('salary')?.touched &&
+             createEmployeeForm.get('salary')?.errors?.required">Lương không được để trống</div>
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-2">Email <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="email" formControlName="email">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('email')?.invalid && createEmployeeForm.get('email')?.touched &&
+             createEmployeeForm.get('email')?.errors?.required">Email Không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('name')?.invalid && createEmployeeForm.get('email')?.dirty &&
+             createEmployeeForm.get('email')?.errors?.email">Email không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="phoneNumber" class="col-2">Số Điện Thoại <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="phoneNumber" formControlName="phoneNumber">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('phoneNumber')?.invalid && createEmployeeForm.get('phoneNumber')?.touched &&
+             createEmployeeForm.get('phoneNumber')?.errors?.required">Số điện thoại Không được để trống</div>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('phoneNumber')?.invalid && createEmployeeForm.get('phoneNumber')?.dirty &&
+             createEmployeeForm.get('phoneNumber')?.errors?.pattern">Số Điện thoại không đúng định dạng</div>
+        </div>
+        <div class="form-group row">
+          <label for="address" class="col-2">Địa Chỉ <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="address" formControlName="address">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('address')?.invalid && createEmployeeForm.get('address')?.touched &&
+             createEmployeeForm.get('address')?.errors?.required">Địa Chỉ Không được để trống</div>
+        </div>
+        <div class="form-group row">
+          <label for="dayOfBirth" class="col-2">Ngày Sinh <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="dayOfBirth" formControlName="dateOfBirth" type="date">
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('dateOfBirth')?.invalid && createEmployeeForm.get('dateOfBirth')?.touched &&
+             createEmployeeForm.get('dateOfBirth')?.errors?.required">Ngày Sinh Không được để trống</div>
+        </div>
+        <div class="form-group row ">
+          <label for="position" class="col-2">Vị Trí <span class="text-danger">*</span></label>
+          <select  id="position" class="form-select col-10 form-control " formControlName="position">
+            <option selected disabled value="">Chọn...</option>
+            <option value="letan">Lễ Tân</option>
+            <option value="phucvu">Phục Vụ</option>
+            <option value="chuyenvien">Chuyên Viên</option>
+            <option value="giamsat">Giám Sát</option>
+            <option value="quanli">Quản Lí</option>
+            <option value="giamdoc">Giám Đốc</option>
+          </select>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('position')?.invalid && createEmployeeForm.get('position')?.touched &&
+             createEmployeeForm.get('position')?.errors?.required">Vị trí Không được để trống</div>
+        </div>
+        <div class="form-group row ">
+          <label for="educationDegree" class="col-2">Trình Độ <span class="text-danger">*</span></label>
+          <select  id="educationDegree" class="form-select col-10 form-control " formControlName="educationDegree">
+            <option selected disabled value="">Chọn...</option>
+            <option value="trungcap">Trung Cấp</option>
+            <option value="caodang">Cao Đẳng</option>
+            <option value="daihoc">Đại Học</option>
+            <option value="saudaihoc">Sau Đại Học</option>
+          </select>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('educationDegree')?.invalid && createEmployeeForm.get('educationDegree')?.touched &&
+             createEmployeeForm.get('educationDegree')?.errors?.required">Trình độ Không được để trống</div>
+        </div>
+        <div class="form-group row ">
+          <label for="division" class="col-2">Bộ Phận <span class="text-danger">*</span></label>
+          <select  id="division" class="form-select col-10 form-control " formControlName="division">
+            <option selected disabled value="">Chọn...</option>
+            <option value="sale">Sale-Marketing</option>
+            <option value="hanhchinh">Hành Chính</option>
+            <option value="phucvu">Phục Vụ</option>
+            <option value="quanli">Quản Lí</option>
+          </select>
+          <div class="alert alert-danger col-12 mt-2" *ngIf="createEmployeeForm.get('division')?.invalid && createEmployeeForm.get('division')?.touched &&
+             createEmployeeForm.get('division')?.errors?.required">Bộ Phận Không được để trống</div>
+        </div>
+        <div class="form-group row">
+          <span type="hidden" class="col-3"></span>
+          <span type="hidden" class="col-2"></span>
+          <button type="submit" class="btn btn-primary" [disabled]="!createEmployeeForm.valid">Submit</button> &nbsp;
+          <a class="btn btn-secondary" routerLink="/listEmployee">Đóng</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

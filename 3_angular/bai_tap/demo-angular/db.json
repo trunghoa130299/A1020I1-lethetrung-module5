@@ -1,0 +1,36 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "trung",
+      "age": 20,
+      "address": "nghệ an",
+      "mark": 5,
+      "avatar": ""
+    },
+    {
+      "id": 2,
+      "name": "trung1",
+      "age": 20,
+      "address": "nghệ an",
+      "mark": 3,
+      "avatar": ""
+    },
+    {
+      "id": 3,
+      "name": "trung",
+      "age": 20,
+      "address": "nghệ an",
+      "mark": 5,
+      "avatar": ""
+    },
+    {
+      "id": 4,
+      "name": "trung4",
+      "age": "23",
+      "address": "nghe an",
+      "mark": "10",
+      "avatar": "a"
+    }
+  ]
+}

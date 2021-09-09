@@ -1,1 +1,59 @@
-<p>view-employee works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="text-center">Sửa Nhân Viên</h3>
+    </div>
+    <div class="col-12">
+      <form class="form-group" [formGroup]="viewEmployeeForm">
+        <div class="form-group row">
+          <label for="idCs" class="col-2">ID <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="idCs" formControlName="id">
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-2">Họ Tên <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="name" formControlName="name">
+        </div>
+        <div class="form-group row">
+          <label for="idCard" class="col-2">CMND <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="idCard" formControlName="idCard">
+        </div>
+        <div class="form-group row">
+          <label for="salary" class="col-2">Lương <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="salary" formControlName="idCard">
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-2">Email <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="email" formControlName="email">
+        </div>
+        <div class="form-group row">
+          <label for="phoneNumber" class="col-2">Số Điện Thoại <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="phoneNumber" formControlName="phoneNumber">
+        </div>
+        <div class="form-group row">
+          <label for="address" class="col-2">Địa Chỉ <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="address" formControlName="address">
+        </div>
+        <div class="form-group row">
+          <label for="dayOfBirth" class="col-2">Ngày Sinh <span class="text-danger">*</span></label>
+          <input class="form-control col-10 " id="dayOfBirth" formControlName="dateOfBirth" type="date">
+        </div>
+        <div class="form-group row ">
+          <label for="position" class="col-2">Vị Trí <span class="text-danger">*</span></label>
+          <input id="position" class="form-control col-10" formControlName="position" >
+        </div>
+        <div class="form-group row ">
+          <label for="educationDegree" class="col-2">Trình Độ <span class="text-danger">*</span></label>
+          <input id="educationDegree" class="form-control col-10" formControlName="educationDegree" >
+        </div>
+        <div class="form-group row ">
+          <label for="division" class="col-2">Bộ Phận <span class="text-danger">*</span></label>
+          <input id="division" class="form-control col-10" formControlName="division" >
+        </div>
+        <div class="form-group row">
+          <span type="hidden" class="col-2"></span>
+          <a class="btn btn-secondary" routerLink="/listEmployee">Đóng</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

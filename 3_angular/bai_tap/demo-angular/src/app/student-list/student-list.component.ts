@@ -10,12 +10,19 @@ import {StudentService} from '../student.service';
 })
 export class StudentListComponent implements OnInit {
 
-  students: IStudent[] = studentDao;
+  students: IStudent[] = [];
 
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
-    this.students = this.studentService.getAllStudent();
+    this.studentService.getAllStudent().subscribe(
+      (data) => {
+        this.students = data;
+    }, () => {
+        console.log('loi xay ra');
+      }, () => {
+        console.log('complete');
+      });
   }
 
 }

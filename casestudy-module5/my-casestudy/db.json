@@ -1,0 +1,52 @@
+{
+  "customers": [
+    {
+      "id": "KH-0001",
+      "name": "Lê Thế Trung1",
+      "gender": "1",
+      "idCard": "187823298",
+      "email": "trunghoa13021999@gmail.com",
+      "phone": "0900009999",
+      "address": "Nghệ An",
+      "dateOfBirth": "1999-02-13",
+      "idTypeCustomer": "diamond"
+    },
+    {
+      "id": "KH-0002",
+      "name": "lê thế trung",
+      "gender": "1",
+      "idCard": "1234567899",
+      "email": "trunghoa130299@gmail.com",
+      "phone": "0900009999",
+      "address": "thuong son - do luong - nghe an",
+      "dateOfBirth": "1999-02-13",
+      "idTypeCustomer": "platinium"
+    },
+    {
+      "id": "KH-0004",
+      "name": "lê thế đạt",
+      "gender": "1",
+      "idCard": "1234567899",
+      "email": "0989308199ad@gmail.com",
+      "phone": "0900009999",
+      "address": "thuong son - do luong - nghe an",
+      "dateOfBirth": "2021-09-15",
+      "idTypeCustomer": "platinium"
+    }
+  ],
+  "employees": [
+    {
+      "id": "NV-0001",
+      "name": "lê thế đạt",
+      "idCard": "1234567899",
+      "salary": "1234567899",
+      "email": "0989308199ad@gmail.com",
+      "phoneNumber": "0900009999",
+      "address": "thuong son - do luong - nghe an",
+      "dateOfBirth": "2021-09-15",
+      "position": "quanli",
+      "educationDegree": "daihoc",
+      "division": "hanhchinh"
+    }
+  ]
+}

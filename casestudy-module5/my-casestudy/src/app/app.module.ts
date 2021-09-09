@@ -18,6 +18,7 @@ import { ViewCustomerComponent } from './customer/view-customer/view-customer.co
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {NgxPaginationModule} from "ngx-pagination";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {NgxPaginationModule} from "ngx-pagination";
     ReactiveFormsModule,
     FormsModule,
     Ng2SearchPipeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

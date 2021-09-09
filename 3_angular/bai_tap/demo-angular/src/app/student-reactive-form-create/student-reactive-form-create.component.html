@@ -1,13 +1,13 @@
 <div class="container">
 <h1 class="text-center">Create Student</h1>
 <form [formGroup]="createStudent" (ngSubmit)="createStudentForm()">
-  <div class="form-group">
-    <label class="col-form-label">ID</label><input class="form-control" formControlName="id"/>
-  </div>
-  <div class="alert alert-danger" *ngIf="createStudent.get('id')?.invalid && createStudent.get('id')?.touched">
-    <div *ngIf="createStudent.get('id')?.errors?.required">ID Không được để trống</div>
-    <div *ngIf="createStudent.get('id')?.errors?.min">ID Không được nhỏ hơn 5</div>
-  </div>
+<!--  <div class="form-group">-->
+<!--    <label class="col-form-label">ID</label><input class="form-control" formControlName="id"/>-->
+<!--  </div>-->
+<!--  <div class="alert alert-danger" *ngIf="createStudent.get('id')?.invalid && createStudent.get('id')?.touched">-->
+<!--    <div *ngIf="createStudent.get('id')?.errors?.required">ID Không được để trống</div>-->
+<!--    <div *ngIf="createStudent.get('id')?.errors?.min">ID Không được nhỏ hơn 5</div>-->
+<!--  </div>-->
   <div class="form-group">
     <label class="col-form-label">Name</label><input class="form-control" formControlName="name"/>
   </div>

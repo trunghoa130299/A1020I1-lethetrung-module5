@@ -16,17 +16,19 @@ export class DeleteCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = paramMap.get('id');
-      console.log(paramMap.get('id'));
-      this.customerInfor = this.customerService.getCustomerById(this.id);
+      const param = paramMap.get('id');
+      if (param != null) {
+        this.id = param;
+        this.customerService.getCustomerById(this.id).subscribe((data) => {
+          this.customerInfor = data;
+        });
+      }
     });
   }
-  deleteCustomer(id: string) {
-    const customer = this.customerService.getCustomerById(id);
-    if (customer !== undefined){
-      this.customerService.deleteCustomerById(id);
-      this.router.navigate(['listCustomer']);
-    }
-  }
 
+  deleteCustomer(id: string) {
+    this.customerService.deleteCustomerById(id).subscribe(() => {
+      this.router.navigate(['listCustomer']);
+    });
+  }
 }

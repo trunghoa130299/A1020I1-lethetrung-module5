@@ -1,11 +1,13 @@
 export interface Employee {
   id: number;
   name: string;
-  gender: number;
-  idCard: string;
-  email: string;
-  phone: string;
-  address: string;
   dateOfBirth: string;
-  idTypeCustomer?: any;
+  idCard: string;
+  salary: number;
+  phoneNumber: string;
+  email: string;
+  address: string;
+  position: string;
+  educationDegree: string;
+  division: string;
 }

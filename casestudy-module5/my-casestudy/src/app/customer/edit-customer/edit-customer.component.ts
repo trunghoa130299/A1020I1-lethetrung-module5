@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {CustomerService} from "../customer.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Customer} from "../Customer";
 
 @Component({
   selector: 'app-edit-customer',
@@ -11,7 +10,6 @@ import {Customer} from "../Customer";
 })
 export class EditCustomerComponent implements OnInit {
   editCustomerForm: FormGroup;
-  customerInfor: Customer;
   private id: string;
 
   constructor(private customerService: CustomerService, private router: Router, private activatedRoute: ActivatedRoute) { }
@@ -30,15 +28,18 @@ export class EditCustomerComponent implements OnInit {
     });
     this.activatedRoute.paramMap.subscribe((paramap) => {
       this.id = paramap.get('id');
-      this.customerInfor = this.customerService.getCustomerById(this.id);
-      this.editCustomerForm.patchValue(this.customerInfor);
+      this.customerService.getCustomerById(this.id).subscribe(data => {
+        console.log(data);
+        this.editCustomerForm.patchValue(data);
+      });
     });
   }
 
   onEditCustomer() {
     if (this.editCustomerForm.valid){
-      this.customerService.updateCustomer(this.editCustomerForm.value);
-      this.router.navigate(['/listCustomer']);
+      this.customerService.editCustomer(this.editCustomerForm.value, this.id).subscribe((data) => {
+        this.router.navigate(['/listCustomer']);
+      });
     }
   }
 }

@@ -26,15 +26,15 @@
           <div class="col-10">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" id="male" name="gender" value="1" formControlName="gender">
-              <label class="form-check-label" for="male">Male</label>
+              <label class="form-check-label" for="male">Nam</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" id="female" name="gender" value="2" formControlName="gender">
-              <label class="form-check-label" for="female">Female</label>
+              <label class="form-check-label" for="female">Nữ</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" id="lbgt" name="gender" value="0" formControlName="gender">
-              <label class="form-check-label" for="lbgt">LBGT</label>
+              <label class="form-check-label" for="lbgt">Khác</label>
             </div>
           </div>
           <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('gender')?.invalid && createCustomerForm.get('gender')?.touched &&
@@ -79,12 +79,12 @@
         <div class="form-group row ">
           <label for="type" class="col-2">Type <span class="text-danger">*</span></label>
           <select  id="type" class="form-select col-10 form-control " formControlName="idTypeCustomer">
-            <option selected disabled value="">Choose...</option>
-            <option value="Diamond">Diamond</option>
-            <option value="Platinium">Platinium</option>
-            <option value="Gold">Gold</option>
-            <option value="Silver">Silver</option>
-            <option value="Member">Member</option>
+            <option selected disabled value="">Chọn...</option>
+            <option value="diamond">Diamond</option>
+            <option value="platinium">Platinium</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="member">Member</option>
           </select>
           <div class="alert alert-danger col-12 mt-2" *ngIf="createCustomerForm.get('idTypeCustomer')?.invalid && createCustomerForm.get('idTypeCustomer')?.touched &&
              createCustomerForm.get('idTypeCustomer')?.errors?.required">Loại Khách hàng Không được để trống</div>
