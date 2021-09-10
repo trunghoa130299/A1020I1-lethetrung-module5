@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Customer} from "../Customer";
 import {CustomerService} from "../customer.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {CustomerType} from "../CustomerType";
+import {CustomertypeService} from "../customertype.service";
 
 @Component({
   selector: 'app-view-customer',
@@ -12,8 +14,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class ViewCustomerComponent implements OnInit {
   viewCustomerForm: FormGroup;
   private id: string;
-
-  constructor(private customerService: CustomerService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  customerType: CustomerType;
+  constructor(private customerService: CustomerService, private router: Router, private activatedRoute: ActivatedRoute,
+              private customertypeService: CustomertypeService) {
+  }
 
   ngOnInit(): void {
     this.viewCustomerForm = new FormGroup({
@@ -27,6 +31,7 @@ export class ViewCustomerComponent implements OnInit {
       dateOfBirth: new FormControl(''),
       idTypeCustomer: new FormControl(''),
     });
+    this.getAllCustomerType();
     this.activatedRoute.paramMap.subscribe((paramap) => {
       this.id = paramap.get('id');
       this.customerService.getCustomerById(this.id).subscribe(data => {
@@ -36,4 +41,13 @@ export class ViewCustomerComponent implements OnInit {
     });
   }
 
+  getAllCustomerType() {
+    this.customertypeService.getAllCustomerType().subscribe(res => {
+      this.customerType = res;
+    });
+  }
+
+  compareFn(c1: Customer, c2: Customer): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+  }
 }

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {CustomerService} from "../customer.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {CustomerType} from "../CustomerType";
+import {CustomertypeService} from "../customertype.service";
+import {Customer} from "../Customer";
 
 @Component({
   selector: 'app-edit-customer',
@@ -11,8 +14,9 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class EditCustomerComponent implements OnInit {
   editCustomerForm: FormGroup;
   private id: string;
-
-  constructor(private customerService: CustomerService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  customerType: CustomerType;
+  constructor(private customerService: CustomerService, private router: Router, private activatedRoute: ActivatedRoute,
+              private customertypeService: CustomertypeService) { }
 
   ngOnInit(): void {
     this.editCustomerForm = new FormGroup({
@@ -26,6 +30,7 @@ export class EditCustomerComponent implements OnInit {
       dateOfBirth: new FormControl('', [Validators.required]),
       idTypeCustomer: new FormControl('', [Validators.required]),
     });
+    this.getAllCustomerType();
     this.activatedRoute.paramMap.subscribe((paramap) => {
       this.id = paramap.get('id');
       this.customerService.getCustomerById(this.id).subscribe(data => {
@@ -34,7 +39,14 @@ export class EditCustomerComponent implements OnInit {
       });
     });
   }
-
+  getAllCustomerType() {
+    this.customertypeService.getAllCustomerType().subscribe(res => {
+      this.customerType = res;
+    });
+  }
+  compareFn(c1: Customer, c2: Customer): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+  }
   onEditCustomer() {
     if (this.editCustomerForm.valid){
       this.customerService.editCustomer(this.editCustomerForm.value, this.id).subscribe((data) => {

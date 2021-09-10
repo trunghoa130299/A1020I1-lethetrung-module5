@@ -77,14 +77,9 @@
              editCustomerForm.get('dateOfBirth')?.errors?.required">Ngày Sinh Không được để trống</div>
         </div>
         <div class="form-group row ">
-          <label for="type" class="col-2">Type <span class="text-danger">*</span></label>
-          <select  id="type" class="form-select col-10 form-control " formControlName="idTypeCustomer">
-            <option selected disabled value="">Choose...</option>
-            <option value="diamond">Diamond</option>
-            <option value="platinium">Platinium</option>
-            <option value="gold">Gold</option>
-            <option value="silver">Silver</option>
-            <option value="member">Member</option>
+          <label for="idTypeCustomer" class="col-2">Type <span class="text-danger">*</span></label>
+          <select formControlName="idTypeCustomer" [compareWith]="compareFn" id="idTypeCustomer" class="col-10 form-control">
+            <option *ngFor="let cusType of customerType" [ngValue]="cusType">{{cusType.name}}</option>
           </select>
           <div class="alert alert-danger col-12 mt-2" *ngIf="editCustomerForm.get('idTypeCustomer')?.invalid && editCustomerForm.get('idTypeCustomer')?.touched &&
              editCustomerForm.get('idTypeCustomer')?.errors?.required">Loại Khách hàng Không được để trống</div>

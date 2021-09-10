@@ -51,8 +51,10 @@
           <input class="form-control col-10 " id="dayOfBirth" formControlName="dateOfBirth" type="date">
         </div>
         <div class="form-group row ">
-          <label for="type" class="col-2">Type <span class="text-danger">*</span></label>
-          <input class="form-control col-10 " id="type" formControlName="idTypeCustomer" type="text">
+          <label for="idTypeCustomer" class="col-2">Type <span class="text-danger">*</span></label>
+          <select formControlName="idTypeCustomer" [compareWith]="compareFn" id="idTypeCustomer" class="col-10 form-control">
+            <option *ngFor="let cusType of customerType" [ngValue]="cusType">{{cusType.name}}</option>
+          </select>
         </div>
         <div class="form-group row">
           <span class="col-2"></span>

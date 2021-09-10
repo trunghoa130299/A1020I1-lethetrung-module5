@@ -47,7 +47,7 @@
           <td>{{customer.phone}}</td>
           <td>{{customer.email}}</td>
           <td>{{customer.address}}</td>
-          <td>{{customer.idTypeCustomer}}</td>
+          <td>{{customer.idTypeCustomer.name}}</td>
           <td><a [routerLink]="['/viewCustomer',customer.id]" class="btn btn-primary">Xem</a></td>
           <td><a [routerLink]="['/editCustomer',customer.id]" class="btn btn-warning">Sửa</a></td>
           <td><a [routerLink]="['/deleteCustomer',customer.id]" class="btn btn-danger">Xóa</a></td>

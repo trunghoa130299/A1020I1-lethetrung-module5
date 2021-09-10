@@ -45,9 +45,9 @@
           <td>{{employee.phoneNumber}}</td>
           <td>{{employee.email}}</td>
           <td>{{employee.address}}</td>
-          <td>{{employee.position}}</td>
-          <td>{{employee.educationDegree}}</td>
-          <td>{{employee.division}}</td>
+          <td>{{employee.position.name}}</td>
+          <td>{{employee.educationDegree.name}}</td>
+          <td>{{employee.division.name}}</td>
           <td><a [routerLink]="['/viewEmployee',employee.id]" class="btn btn-primary">Xem</a></td>
           <td><a [routerLink]="['/editEmployee',employee.id]" class="btn btn-warning">Sửa</a></td>
           <td><a [routerLink]="['/deleteEmployee',employee.id]" class="btn btn-danger">Xóa</a></td>

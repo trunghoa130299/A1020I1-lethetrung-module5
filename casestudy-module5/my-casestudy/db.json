@@ -9,7 +9,10 @@
       "phone": "0900009999",
       "address": "Nghệ An",
       "dateOfBirth": "1999-02-13",
-      "idTypeCustomer": "diamond"
+      "idTypeCustomer":  {
+        "id": 1,
+        "name": "VIP"
+      }
     },
     {
       "id": "KH-0002",
@@ -20,7 +23,10 @@
       "phone": "0900009999",
       "address": "thuong son - do luong - nghe an",
       "dateOfBirth": "1999-02-13",
-      "idTypeCustomer": "platinium"
+      "idTypeCustomer":  {
+        "id": 1,
+        "name": "VIP"
+      }
     },
     {
       "id": "KH-0004",
@@ -31,7 +37,10 @@
       "phone": "0900009999",
       "address": "thuong son - do luong - nghe an",
       "dateOfBirth": "2021-09-15",
-      "idTypeCustomer": "platinium"
+      "idTypeCustomer":  {
+        "id": 1,
+        "name": "VIP"
+      }
     }
   ],
   "employees": [
@@ -44,9 +53,120 @@
       "phoneNumber": "0900009999",
       "address": "thuong son - do luong - nghe an",
       "dateOfBirth": "2021-09-15",
-      "position": "quanli",
-      "educationDegree": "daihoc",
-      "division": "hanhchinh"
+      "position": {
+        "id": 2,
+        "name": "Phục Vụ"
+      },
+      "educationDegree": {
+        "id": 2,
+        "name": "Cao Đẳng"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản Lí"
+      }
+    },
+    {
+      "id": "NV-0003",
+      "name": "lê thế trung",
+      "idCard": "1234567899",
+      "salary": "5000000",
+      "email": "trunghoa130299@gmail.com",
+      "phoneNumber": "0907777999",
+      "address": "thuong son - do luong - nghe an",
+      "dateOfBirth": "2021-09-24",
+      "position": {
+        "id": 2,
+        "name": "Phục Vụ"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Trung Cấp"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành Chính"
+      }
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "name": "Lễ Tân"
+    },
+    {
+      "id": 2,
+      "name": "Phục Vụ"
+    },
+    {
+      "id": 3,
+      "name": "Chuyên Viên"
+    },
+    {
+      "id": 4,
+      "name": "Giám Sát"
+    },
+    {
+      "id": 5,
+      "name": "Quản Lí"
+    },
+    {
+      "id": 6,
+      "name": "Giám Đốc"
+    }
+  ],
+  "educationDegree": [
+    {
+      "id": 1,
+      "name": "Đại Học"
+    },
+    {
+      "id": 2,
+      "name": "Cao Đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Trung Cấp"
+    },
+    {
+      "id": 4,
+      "name": "Sau Đại Học"
+    }
+  ],
+  "division": [
+    {
+      "id": 1,
+      "name": "Sale-Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Hành Chính"
+    },
+    {
+      "id": 3,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 4,
+      "name": "Quản Lí"
+    }
+  ],
+  "idTypeCustomer": [
+    {
+      "id": 1,
+      "name": "VIP"
+    },
+    {
+      "id": 2,
+      "name": "GOLD"
+    },
+    {
+      "id": 3,
+      "name": "SILVER"
+    },
+    {
+      "id": 4,
+      "name": "MEMBER"
     }
   ]
 }
