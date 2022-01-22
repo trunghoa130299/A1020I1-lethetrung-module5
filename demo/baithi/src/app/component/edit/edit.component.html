@@ -1,0 +1,70 @@
+<div class="container">
+<h1 class="text-center">Sửa thông tin</h1>
+<form [formGroup]="editForm" (ngSubmit)="editSubmit()">
+    <div class="form-group">
+      <label class="col-form-label">Mã Sổ</label><input class="form-control" formControlName="id"/>
+    </div>
+    <div class="alert alert-danger" *ngIf="editForm.get('id')?.invalid && editForm.get('id')?.touched">
+      <div *ngIf="editForm.get('id')?.errors?.required">ID Không được để trống</div>
+    </div>
+  <div class="form-group">
+    <label class="col-form-label">Mã Khách hàng</label>
+    <select formControlName="maKh" [compareWith]="compareFn" id="maKh" class="col-10 form-control">
+      <option *ngFor="let cusType of khachHangList" [ngValue]="cusType">{{cusType.id}}</option>
+    </select>
+    <div class="alert alert-danger" *ngIf="editForm.get('maKh')?.invalid && editForm.get('maKh')?.touched">
+      <div *ngIf="editForm.get('maKh')?.errors?.required">mã KH Không được để trống</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">tên khách hàng</label>
+    <select formControlName="tenKh" [compareWith]="compareFn" id="tenKh" class="col-10 form-control">
+      <option *ngFor="let cusType of khachHangList" [ngValue]="cusType">{{cusType.name}}</option>
+    </select>
+    <div class="alert alert-danger" *ngIf="editForm.get('tenKh')?.invalid && editForm.get('tenKh')?.touched">
+      <div *ngIf="editForm.get('tenKh')?.errors?.required">Ten KH Không được để trống</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Ngày mở</label><input class="form-control" formControlName="ngayMo" type="date"/>
+    <div class="alert alert-danger" *ngIf="editForm.get('ngayMo')?.invalid && editForm.get('ngayMo')?.touched" >
+      <div *ngIf="editForm.get('ngayMo')?.errors?.required">Ngày mở Không được để trống</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Thời gian bắt đầu</label><input class="form-control" formControlName="tgbd" type="date"/>
+    <div class="alert alert-danger" *ngIf="editForm.get('tgbd')?.invalid && editForm.get('tgbd')?.touched">
+      <div *ngIf="editForm.get('tgbd')?.errors?.required">Thời gian bắt đầu Không được để trống</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Kỳ Hạn</label><input class="form-control" formControlName="kyHan"/>
+    <div class="alert alert-danger" *ngIf="editForm.get('kyHan')?.invalid && editForm.get('kyHan')?.touched">
+      <div *ngIf="editForm.get('kyHan')?.errors?.required">Kỳ hạn Không được để trống</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Số tiền</label><input class="form-control" formControlName="soTien"/>
+    <div class="alert alert-danger" *ngIf="editForm.get('soTien')?.invalid && editForm.get('soTien')?.touched">
+      <div *ngIf="editForm.get('soTien')?.errors?.required">Số Tiền Không được để trống</div>
+      <div *ngIf="editForm.get('soTien')?.errors?.min">Số Tiền Không được bé hơn 1000000</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Lãi Suất</label><input class="form-control" formControlName="laiSuat"/>
+    <div class="alert alert-danger" *ngIf="editForm.get('soTien')?.invalid && editForm.get('laiSuat')?.touched">
+      <div *ngIf="editForm.get('laiSuat')?.errors?.required">Lãi Suất Không được để trống</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label">Ưu Đãi</label><input class="form-control" formControlName="uuDai"/>
+    <div class="alert alert-danger" *ngIf="editForm.get('uuDai')?.invalid && editForm.get('uuDai')?.touched">
+      <div *ngIf="editForm.get('uuDai')?.errors?.required">Ưu Đãi Không được để trống</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Sửa" class="btn btn-primary" [disabled]="!editForm.valid"> &nbsp;
+    <a routerLink="" class="btn btn-warning" >Quay lại</a>
+  </div>
+</form>
+</div>

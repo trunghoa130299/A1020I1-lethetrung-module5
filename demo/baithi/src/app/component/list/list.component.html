@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <h1 class="text-danger">Danh sách </h1>
+  <div class="d-flex">
+    <input type="text" class="form-control mr-4" [(ngModel)]="nameSearch" style="width: 400px;height: 50px" placeholder="Search" height="40px">
+    <select formControlName="maKh" [compareWith]="compareFn" id="maKh" class="col-4 form-control">
+      <option *ngFor="let cusType of khachHangList" [ngValue]="cusType">{{cusType.name}}</option>
+    </select>
+    <button class="btn btn-outline-danger w-25" (click)="search()">Search</button>
+  </div>
+  <div class="row">
+    <table class="table table-striped">
+      <tr>
+        <th>Mã Sổ</th>
+        <th>Mã Khách Hàng</th>
+        <th>Tên Khách Hàng</th>
+        <th>Ngày Mở Sổ</th>
+        <th>Thời Gian Bắt Đầu Gửi</th>
+        <th>Kỳ hạn</th>
+        <th>Số tiền gửi</th>
+        <th>Lãi Suất</th>
+        <th>Ưu Đãi</th>
+      </tr>
+      <tr *ngFor="let stk of soTietKiem">
+        <td>{{stk.id}}</td>
+        <td>{{stk.maKh.id}}</td>
+        <td>{{stk.tenKh.name}}</td>
+        <td>{{stk.ngayMo}}</td>
+        <td>{{stk.tgbd}}</td>
+        <td>{{stk.kyHan}}</td>
+        <td>{{stk.soTien}}</td>
+        <td>{{stk.laiSuat}}</td>
+        <td>{{stk.uuDai}}</td>
+        <td>
+          <a class="btn btn-warning" [routerLink]="['/edit',stk.id]">Edit</a> &nbsp;&nbsp;
+          <button class="btn btn-danger" (click)="delete(stk.id)">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

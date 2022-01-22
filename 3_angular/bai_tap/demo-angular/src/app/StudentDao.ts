@@ -7,7 +7,7 @@ export const studentDao: IStudent[] = [
     age: 20,
     address: 'nghệ an',
     mark: 5,
-    avatar: ''
+    avatar: '1'
   },
 
   {
@@ -16,7 +16,7 @@ export const studentDao: IStudent[] = [
     age: 20,
     address: 'nghệ an',
     mark: 5,
-    avatar: ''
+    avatar: '1'
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const studentDao: IStudent[] = [
     age: 20,
     address: 'nghệ an',
     mark: 4,
-    avatar: ''
+    avatar: '1'
   },
   {
     id: 4,
@@ -32,6 +32,6 @@ export const studentDao: IStudent[] = [
     age: 20,
     address: 'nghệ an',
     mark: 3,
-    avatar: ''
+    avatar: '1'
   },
 ]

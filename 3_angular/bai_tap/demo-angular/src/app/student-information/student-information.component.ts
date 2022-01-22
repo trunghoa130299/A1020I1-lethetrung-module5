@@ -18,7 +18,9 @@ export class StudentInformationComponent implements OnInit {
   ngOnInit(): void {
     this.activeRouter.paramMap.subscribe((param) => {
       this.id = Number(param.get('id'));
-      this.studentInformation = this.studentService.getStudentById(this.id);
+      this.studentService.getStudentById(this.id).subscribe((data) => {
+        this.studentInformation = data;
+      });
     });
   }
   changeMark(mark: number){

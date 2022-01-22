@@ -13,10 +13,16 @@ export class StudentService {
   getAllStudent(): Observable<IStudent[]> {
     return this.httpClient.get<IStudent[]>(this.API_URL);
   }
-  getStudentById(id: number){
-    return this.students.find(student => student.id === id);
+  getStudentById(id: number): Observable<any>{
+    return this.httpClient.get<any>(this.API_URL + '/' + id);
   }
   createStudent(student: IStudent): Observable<IStudent>{
     return this.httpClient.post<IStudent>(this.API_URL, student);
+  }
+  searchStudent(name: string): Observable<any> {
+    return this.httpClient.get(this.API_URL + '?name_like=' + name);
+  }
+  deleteStudent(id: number): Observable<any> {
+    return this.httpClient.delete(`${this.API_URL}/${id}`);
   }
 }

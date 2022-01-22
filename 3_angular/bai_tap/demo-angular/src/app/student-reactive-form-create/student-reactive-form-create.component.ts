@@ -25,7 +25,9 @@ export class StudentReactiveFormCreateComponent implements OnInit {
   }
 
   createStudentForm() {
+    if (this.createStudent.valid) {
     this.studentService.createStudent(this.createStudent.value).subscribe();
     this.router.navigateByUrl('');
+  }
   }
 }

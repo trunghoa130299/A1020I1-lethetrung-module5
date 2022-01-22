@@ -3,6 +3,6 @@ export interface IStudent {
   name: string;
   age: number;
   address: string;
-  avatar?: string;
+  avatar: string;
   mark: number;
 }

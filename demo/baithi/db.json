@@ -1,0 +1,65 @@
+{
+  "KhachHang": [
+    {
+      "id": "1",
+      "name": "Lê Thế Trung"
+    },
+    {
+      "id": "2",
+      "name": "Lê Thế Đạt"
+    }
+  ],
+  "SoTietKiem": [
+    {
+      "id": "2",
+      "maKh": {
+        "id": "1",
+        "name": "Lê Thế Trung"
+      },
+      "tenKh": {
+        "id": "2",
+        "name": "Lê Thế Trung"
+      },
+      "ngayMo": "2021-09-17",
+      "tgbd": "2021-09-18",
+      "kyHan": "6 tháng ",
+      "soTien": "20000000",
+      "laiSuat": "8% năm",
+      "uuDai": "áo mưa"
+    },
+    {
+      "id": "2",
+      "maKh": {
+        "id": "1",
+        "name": "Lê Thế Trung"
+      },
+      "tenKh": {
+        "id": "2",
+        "name": "Lê Thế Trung"
+      },
+      "ngayMo": "2021-09-17",
+      "tgbd": "2021-09-18",
+      "kyHan": "6 tháng ",
+      "soTien": "20000000",
+      "laiSuat": "8% năm",
+      "uuDai": "áo mưa"
+    },
+    {
+      "id": "3",
+      "maKh": {
+        "id": "1",
+        "name": "Lê Thế Trung"
+      },
+      "tenKh": {
+        "id": "2",
+        "name": "Lê Thế Trung"
+      },
+      "ngayMo": "2021-09-17",
+      "tgbd": "2021-09-18",
+      "kyHan": "6 tháng ",
+      "soTien": "20000000",
+      "laiSuat": "8% năm",
+      "uuDai": "áo mưa"
+    }
+  ]
+}

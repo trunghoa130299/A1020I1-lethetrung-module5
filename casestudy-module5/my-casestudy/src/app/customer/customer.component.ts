@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Customer} from "./Customer";
-import {customerDao,} from "./CustomerDao";
 import {CustomerService} from "./customer.service";
 
 

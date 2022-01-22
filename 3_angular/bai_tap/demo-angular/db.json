@@ -6,7 +6,7 @@
       "age": 20,
       "address": "nghệ an",
       "mark": 5,
-      "avatar": ""
+      "avatar": "1"
     },
     {
       "id": 2,
@@ -14,23 +14,7 @@
       "age": 20,
       "address": "nghệ an",
       "mark": 3,
-      "avatar": ""
-    },
-    {
-      "id": 3,
-      "name": "trung",
-      "age": 20,
-      "address": "nghệ an",
-      "mark": 5,
-      "avatar": ""
-    },
-    {
-      "id": 4,
-      "name": "trung4",
-      "age": "23",
-      "address": "nghe an",
-      "mark": "10",
-      "avatar": "a"
+      "avatar": "1"
     }
   ]
 }
